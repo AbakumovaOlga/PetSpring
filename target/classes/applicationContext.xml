@@ -15,7 +15,9 @@
           class="ru.abakumova.petspring.ClassicalMusic">
     </bean>
     <bean id="musicPlayer"
-          class="ru.abakumova.petspring.MusicPlayer">
+          class="ru.abakumova.petspring.MusicPlayer"
+    scope="prototype">
+
         <property name="musicList">
             <list>
                 <ref bean="rockMusic"></ref>
