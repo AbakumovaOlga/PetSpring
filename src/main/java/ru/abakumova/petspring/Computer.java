@@ -16,7 +16,7 @@ public class Computer {
     public String toString() {
         return "Computer{" +
                 "id=" + id +
-                ", " + musicPlayer.playMusic() +
+                ", " + musicPlayer.playMusic(Genre.CLASSICAL) +
                 '}';
     }
 }
