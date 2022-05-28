@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Music {
-    String getSong(int index);
+    String getSong();
 
     List<String> listSong = new ArrayList<>();
 }

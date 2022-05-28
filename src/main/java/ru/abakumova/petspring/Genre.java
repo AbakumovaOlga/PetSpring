@@ -2,5 +2,6 @@ package ru.abakumova.petspring;
 
 public enum Genre {
     CLASSICAL,
-    ROCK
+    ROCK,
+    JAZZ
 }

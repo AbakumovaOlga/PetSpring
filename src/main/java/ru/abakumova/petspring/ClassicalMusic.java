@@ -4,9 +4,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Random;
 
-@Component
-@Scope("prototype")
+
 public class ClassicalMusic implements Music {
     public ClassicalMusic() {
         listSong.add("ClassicalMusicSong0");
@@ -14,11 +14,9 @@ public class ClassicalMusic implements Music {
         listSong.add("ClassicalMusicSong2");
     }
 
-    public void doMyInit(){
-        System.out.println("doMyInit");
-    }
-    public String getSong(int index) {
-
-        return listSong.get(index);
+    @Override
+    public String getSong() {
+        Random random=new Random();
+        return listSong.get(random.nextInt(listSong.size()));
     }
 }

@@ -2,7 +2,9 @@ package ru.abakumova.petspring;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import java.util.Random;
+
+
 public class RockMusic implements Music{
 
     public RockMusic() {
@@ -12,7 +14,8 @@ public class RockMusic implements Music{
     }
 
     @Override
-    public String getSong(int index) {
-        return listSong.get(index);
+    public String getSong() {
+        Random random=new Random();
+        return listSong.get(random.nextInt(listSong.size()));
     }
 }
